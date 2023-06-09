@@ -3,7 +3,7 @@ import Homepage from './pages/Homepage';
 import Products from './pages/Products';
 import RootPage from './pages/RootPage';
 import Error404 from './pages/Error404';
-
+import ProductDetailsPage from "./pages/ProductsDetailPage";
 // const routeDefinetions = createRoutesFromElements(
 //   <Route>
 //     <Route path="/"  element={<Homepage />} />
@@ -24,6 +24,10 @@ const route = createBrowserRouter([
       { 
         path: 'products', 
         element: <Products />
+      },
+      {
+        path: 'products/:productId/', 
+        element: <ProductDetailsPage />
       }   
     ]
   }
