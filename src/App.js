@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
+import RootPage from './pages/RootPage';
 
 // const routeDefinetions = createRoutesFromElements(
 //   <Route>
@@ -11,8 +12,13 @@ import Products from './pages/Products';
 
 // const route = createBrowserRouter(routeDefinetions);  
 const route = createBrowserRouter([
-  { path: '/', element: <Homepage />},
-  { path: 'products', element: <Products />}
+  { path: '/', 
+    element: <RootPage />,
+    children: [
+      { path: '/', element: <Homepage />},
+      { path: 'products', element: <Products />}   
+    ]
+  }
 ]);
 
 
