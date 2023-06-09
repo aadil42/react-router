@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } 
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
 import RootPage from './pages/RootPage';
+import Error404 from './pages/Error404';
 
 // const routeDefinetions = createRoutesFromElements(
 //   <Route>
@@ -14,9 +15,16 @@ import RootPage from './pages/RootPage';
 const route = createBrowserRouter([
   { path: '/', 
     element: <RootPage />,
+    errorElement: <Error404 message="Can't find this page" />,
     children: [
-      { path: '/', element: <Homepage />},
-      { path: 'products', element: <Products />}   
+      { 
+        path: '/', 
+        element: <Homepage />
+      },
+      { 
+        path: 'products', 
+        element: <Products />
+      }   
     ]
   }
 ]);

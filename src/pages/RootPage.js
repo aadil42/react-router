@@ -3,10 +3,10 @@ import Navigation from '../components/Navigation';
 
 const RootPage = () => {
     return (
-        <>
+        <main>
             <Navigation />
             <Outlet />
-        </>
+        </main>
     )
 }
 
