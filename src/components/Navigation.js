@@ -8,7 +8,7 @@ const Navigation = () => {
                 <ul className={classes.list}>
                     <li>
                     <NavLink 
-                    to="/" 
+                    to="" 
                     className={({isActive}) => {
                         return isActive ? classes.active : undefined
                     }} >Home</NavLink>

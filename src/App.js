@@ -18,7 +18,7 @@ const route = createBrowserRouter([
     errorElement: <Error404 message="Can't find this page" />,
     children: [
       { 
-        path: '/', 
+        path: '', 
         element: <Homepage />
       },
       { 

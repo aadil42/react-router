@@ -12,7 +12,7 @@ const Products = () => {
         <h1>Products</h1>
             <ul>
                 { PRODUCTS.map((prod) => {
-                    return  <li><Link to={`/products/${prod.id}`}>{prod.title}</Link></li>;
+                    return  <li><Link to={`${prod.id}`}>{prod.title}</Link></li>;
                 })}
             </ul>
         </main>
